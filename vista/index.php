@@ -7,10 +7,6 @@
     </head>
     <body>
         <header>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 01dcb1d80d59306e226eeedb2960f741c7003c4f
           <div>
             <ul id="menu-main">
               <a href="#"><li>INICIO</li></a>
@@ -19,13 +15,8 @@
               <a href="#"><li>CONTACTO</li></a>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
           <!-- image -->
->>>>>>> master
-=======
           <!-- image -->
->>>>>>> 01dcb1d80d59306e226eeedb2960f741c7003c4f
         </header>
         <section id="slider-container">
                 <!-- slides -->
@@ -60,8 +51,8 @@
                 <h4></h4>
               </header>
                 <caption>Servicio al cliente</caption>
-                <h2>600 900 4000 <br>
-                600 900 4500</h2>
+                <h2>600 900 4000</h2>
+                <h2>600 900 4500</h2>
               </div>
           <div>
             <header>
