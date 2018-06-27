@@ -1,16 +1,21 @@
 ul#menu-main{
   border: 1px solid white;
-  height: 30px;
+  background: rgb(29, 80, 106);
+  height: 50px;
+  margin-top: 10px;
   text-align: center;
 }
 #menu-main li{
-  border-radius: 10px;
   display: inline-block;
-  width: 150px;
+  width: 200px;
   height: 30px;
+  margin-left: 10px;
+  margin-top: 13px;
   text-align: center;
-  color: black;
-  padding-top: 10px;
-  font-size: 14px;
-  background-color: #f5b422;
+  color: white;
+}
+#menu-main li:hover{
+  background: rgb(20, 87, 149);
+
+
 }
