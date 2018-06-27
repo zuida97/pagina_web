@@ -38,4 +38,4 @@ document.querySelectorAll('.puntos_de_navegacion').forEach(function (elem) {
     })
 })
 
-// setInterval(function(){mostrarFotos(++indicefotos)}, 3000);
+setInterval(function(){mostrarFotos(++indicefotos)}, 3000);
