@@ -1,0 +1,16 @@
+ul#menu-main{
+  border: 1px solid white;
+  height: 30px;
+  text-align: center;
+}
+#menu-main li{
+  border-radius: 10px;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  color: black;
+  padding-top: 10px;
+  font-size: 14px;
+  background-color: #f5b422;
+}
