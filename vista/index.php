@@ -9,7 +9,7 @@
         <header>
           <div>
             <ul id="menu-main">
-              <a href="  "><li>INICIO</li></a>
+              <a href="#"><li>INICIO</li></a>
               <a href="#"><li>NOSOTROS</li></a>
               <a href="#"><li>SERVICIOS Y CATALOGO</li></a>
               <a href="#"><li>CONTACTO</li></a>
