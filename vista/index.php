@@ -6,10 +6,13 @@
     </head>
     <body>
         <header>
-            <h1></h1>
+            <ol>
+                <li>inicio</li>
+                <li>catalogo</li>
+            </ol>
         </header>
         <article class="">
-            
+
         </article>
     </body>
 </html>
