@@ -6,11 +6,14 @@
     </head>
     <body>
         <header>
-            <ol>
-                <li>Home</li>
-                <li>Quienes Somos</li>
-                <li>Catalogo</li>
-            </ol>
+          <div>
+            <ul id="menu-main">
+              <a href="  "><li>INICIO</li></a>
+              <a href="#"><li>NOSOTROS</li></a>
+              <a href="#"><li>SERVICIOS Y CATALOGO</li></a>
+              <a href="#"><li>CONTACTO</li></a>
+            </ul>
+          </div>
         </header>
         <article class="">
 
