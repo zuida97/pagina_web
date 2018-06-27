@@ -7,8 +7,9 @@
     <body>
         <header>
             <ol>
-                <li>inicio</li>
-                <li>catalogo</li>
+                <li>Home</li>
+                <li>Quienes Somos</li>
+                <li>Catalogo</li>
             </ol>
         </header>
         <article class="">
