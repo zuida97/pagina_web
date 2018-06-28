@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/styles.css">
-        <title></title>
+        <title>inicio</title>
     </head>
     <body>
         <header>
           <div>
             <ul id="menu-main">
               <a href="#"><li>INICIO</li></a>
-              <a href="#"><li>NOSOTROS</li></a>
+              <a href="nosotros.php"><li>NOSOTROS</li></a>
               <a href="#"><li>SERVICIOS Y CATALOGO</li></a>
               <a href="#"><li>CONTACTO</li></a>
             </ul>
@@ -70,6 +70,6 @@
             </div>
         </footer>
         </article>
-        <script src="assets/js/slider.js"></script> -->
+        <script src="assets/js/slider.js"></script>
     </body>
 </html>

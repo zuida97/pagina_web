@@ -1,5 +1,10 @@
 body{
   margin: -1px;
+  background-image: url("../img/domotica.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -160,4 +165,8 @@ footer{
 
  #footer{
    text-align: center;
+ }
+
+ #panel {
+     background-color: #2879a3;
  }
