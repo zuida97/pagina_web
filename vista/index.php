@@ -7,44 +7,37 @@
     </head>
     <body>
         <header>
-          <div>
-            <ul id="menu-main">
-              <a href="#"><li>INICIO</li></a>
-              <a href="nosotros.php"><li>NOSOTROS</li></a>
-              <a href="#"><li>SERVICIOS Y CATALOGO</li></a>
-              <a href="#"><li>CONTACTO</li></a>
-            </ul>
-          </div>
-          <!-- image -->
-          <!-- image -->
+          <nav>
+          <?php
+            require_once 'menu.html';
+            $modulo = 1;
+          ?>
+          </nav>
         </header>
-        <section id="slider-container">
-                <!-- slides -->
-                <div class="slide fade fondo1" id="slide-0">
-                  <h1 class="detalle">Cámaras de Seguridad</h1>
-                </div>
+        <article class="">
+          <?php
+          $modulo = (isset($_GET['vst'])) ?  $_GET['vst']:null; // Operador ternario
+          switch ($modulo) {
+            case 1:
+                   require_once 'inicio.html';
+                   break;
+            case 2:
+                    require_once 'nosotros.html';
+                    break;
+            case 3:
+                    require_once 'serviciosycatalogo.php';
+                    break;
+            case 4:
+                    require_once 'contacto.php';
+                    break;
+            default:
+                    require_once 'inicio.html';
+                    break;
+          }
 
-                <div class="slide fade fondo2" id="slide-1">
-                    <h1 class="detalle">Alarmas</h1>
-                </div>
+           ?>
 
-                <div class="slide fade fondo3" id="slide-2">
-                    <h1 class="detalle">Detectores de humo</h1>
-                </div>
-                <!-- Flechas de navegación  -->
-                <div id="Flechas" class="">
-                    <!-- Flecha izquierda -->
-                    <p class="flecha_de_slider eje_y" id="previa">&#10094;</p>
-                    <!-- Flecha derecha -->
-                    <p class="flecha_de_slider eje_y" id="siguiente">&#10095;</p>
-                </div>
-                <!-- puntos de navegación -->
-                <div id="puntos" class="eje_x">
-                    <div class="puntos_de_navegacion"></div>
-                    <div class="puntos_de_navegacion"></div>
-                    <div class="puntos_de_navegacion"></div>
-                </div>
-            </section>
+        </article>
         <footer>
             <div class="">
               <header>
