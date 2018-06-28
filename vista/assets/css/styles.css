@@ -151,3 +151,13 @@ footer{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+ /* FOOTE */
+ #footer li{
+   display: inline-block;
+   margin-left: 10px;
+ }
+
+ #footer{
+   text-align: center;
+ }

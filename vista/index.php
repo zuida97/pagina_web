@@ -56,11 +56,11 @@
               </div>
           <div>
             <header>
-              <h4>Siguenos en:</h4>
-              <ul>
-                <li<a href="#">Facebook</a</li>
-                <li<a href="#">Instagram</a</li>
-                <li<a href="#">Twitter</a</li>
+              <ul id="footer">
+                <li>Siguenos en: </li>
+                <li><a href="#"><img src="assets/img/facebook.png" width="40px"></a></li>
+                <li><a href="#"><img src="assets/img/twitter.png" width="40px"></a></li>
+                <li><a href="#"><img src="assets/img/instagram.png" width="40px"></a></li>
               </ul>
             </header>
           </div>
