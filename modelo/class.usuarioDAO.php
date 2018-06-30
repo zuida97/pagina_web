@@ -13,25 +13,32 @@ class UsuarioDAO
     $conexion->InMoEl($sql);
     }
 
-  public function Login($obj_usuario){
+  public function Login($username, $clave){
 
       $conexion = new Conexion();
-      $sql = "SELECT * FROM tbl_usuarios WHERE username='$obj_usuario->username' AND clave='$obj_usuario->clave' AND estado='0'LIMIT 1";
+      $sql = "SELECT * FROM tbl_usuarios WHERE username='$username' AND clave='$clave' LIMIT 1";
       $resp = $conexion->Consulta($sql);
-      if(count($resp) == 0){
-        echo "No Login";
+      if(gettype($resp) == 'array'){
+        if(count($resp) == 1){
+          $obj_usuario = new Usuario();
+          $obj_usuario->id = $resp[0][0];
+          $obj_usuario->nombres = $resp[0][1];
+          $obj_usuario->apellidos = $resp[0][2];
+          $obj_usuario->username = $resp[0][3];
+          $obj_usuario->clave = $resp[0][4];
+          $obj_usuario->estado =  $resp[0][5];
+          return $obj_usuario;
       }
       else{
-        $obj_usuario->nombres = $resp[0][0];
-        $obj_usuario->apellidos = $resp[0][1];
-        $obj_usuario->username = $resp[0][2];
-        $obj_usuario->clave = $resp[0][3];
-        $obj_usuario->estado =  $resp[0][4];
-        return $obj_usuario;
+        return false;
       }
-
+    }
 
   }
+
+
+
+
 
 
 
