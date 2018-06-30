@@ -40,11 +40,13 @@
            ?>
         </section>
         <article>
-        <footer>
-                <p>Servicio al Cliente
-                600 400 9000 ó 600 400 8000</p>
+        <footer class="pie_pagina">
+            <div class="info">
+              <p>Servicio al Cliente
+              600 400 9000 ó 600 400 8000</p>
+            </div>
           <div>
-              <ul id="footer">
+              <ul class="rrss">
                 <li>Siguenos en: </li>
                 <li><a href="#"><img src="assets/img/facebook.png" width="40px"></a></li>
                 <li><a href="#"><img src="assets/img/twitter.png" width="40px"></a></li>

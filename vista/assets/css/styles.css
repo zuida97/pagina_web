@@ -37,13 +37,19 @@ ul#menu-main{
 }
 
 /* FOOTER */
-#footer li{
+.rrss li{
   display:inline-block;
   margin-left: 10px;
 }
 
-#footer{
+footer.pie_pagina{
   text-align: center;
+  background-color: #1d506a;
+}
+.info p{
+  text-align: left;
+  display: inline-block;
+  width: 400;
 }
 
 #panel {
