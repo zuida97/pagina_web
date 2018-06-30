@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/styles.css">
-        <title>inicio</title>
-
+        <title>Home</title>
     </head>
     <body >
         <!-- HEADER DE LA PAGINA -->
@@ -18,7 +17,7 @@
            ?>
         </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
-        <section>
+        <section class="pagcargada">
           <?php
             $modulo = (isset($_GET['mod'])) ? $_GET['mod'] : null;
             switch ($modulo) {
@@ -64,5 +63,4 @@
       <script src="assets/js/jquery-1.11.0.min.js"></script>
       <script src="assets/js/menu_desplegable.js"></script>
       <script src="assets/js/slider.js"></script>
-
 </html>

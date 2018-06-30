@@ -1,13 +1,5 @@
 <link rel="stylesheet" href="assets/css/formulario.css">
-<!-- <div class="ventana">
-  <div class="mensajes">
-    <h3>Errores Encontrados</h3>
-    <p>Ingrese un nombre</p>
-    <p>Ingrese un Correo</p>
-    <p>Escriba un Mensaje</p>
-    <span id="btncerrar">Cerrar</span>
-  </div>
-</div> -->
+
 
 <section class="formulario">
     <section class="info_contacto">
@@ -21,15 +13,15 @@
         </section>
     </section>
 
-    <form class="form_contacto" action="?" method="post">
+    <form class="form_contacto" action="index.php" method="post">
       <h3>Contáctese con nosotros</h3>
       <div class="user_info">
         <label>*Nombre completo:</label>
-        <input type="text" name="nombre">
+        <input type="text" name="nombre" id="name" required>
         <label>*Correo Electronico:</label>
-        <input type="email" name="email">
+        <input type="email" name="email" id="correo" required>
         <label>*Comentario:</label>
-        <textarea name="comment" rows="8" cols="50"></textarea>
+        <textarea name="comment" rows="8" cols="50" id="comentario" required></textarea>
         <input type="submit" name="enviar" value="Enviar" id="btnenviar">
       </div>
     </form>

@@ -11,7 +11,7 @@
   overflow: hidden;
   box-shadow: 0px 0px 20px #000000;
 }
-.formular:focus{
+.formulario:focus{
   outline: none;
 }
 
