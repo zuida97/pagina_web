@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<H1>
-  AQUI VA EL NOSOTROS QE WAA
-</H1>
-=======
 
-<section class="">
+<article class="">
     <div id="panel">
         <h2>¿Quiénes somos?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-</section>
->>>>>>> 3f32e31d12c4d6c3017ba7c88f2c39d4c41b7fde
+</article>

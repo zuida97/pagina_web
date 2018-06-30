@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/styles.css">
-        <title></title>
+        <title>inicio</title>
     </head>
     <body>
         <!-- HEADER DE LA PAGINA -->
         <header>
+<<<<<<< HEAD
           <h1>CABECERA DE LA PAGINA</h1>
         </header>
         <!-- CARGA EL MENU A lA PAGINA CUANDO SE INGRESA POR DEFAULT -->
@@ -40,6 +41,39 @@
            ?>
         </section>
 
+=======
+          <nav>
+          <?php
+            require_once 'menu.html';
+            $modulo = 1;
+          ?>
+          </nav>
+        </header>
+        <article class="">
+          <?php
+          $modulo = (isset($_GET['vst'])) ?  $_GET['vst']:null; // Operador ternario
+          switch ($modulo) {
+            case 1:
+                   require_once 'inicio.html';
+                   break;
+            case 2:
+                    require_once 'nosotros.html';
+                    break;
+            case 3:
+                    require_once 'serviciosycatalogo.php';
+                    break;
+            case 4:
+                    require_once 'contacto.php';
+                    break;
+            default:
+                    require_once 'inicio.html';
+                    break;
+          }
+
+           ?>
+
+        </article>
+>>>>>>> 3f32e31d12c4d6c3017ba7c88f2c39d4c41b7fde
         <footer>
                 <p>Servicio al Cliente
                 600 400 9000 ó 600 400 8000</p>
@@ -55,5 +89,10 @@
               <p class="centro">&copy; 2018 <a href="" id="pie"></a>Todos los derechos reservados</p>
           </div>
         </footer>
+<<<<<<< HEAD
+=======
+        </article>
+        <script src="assets/js/slider.js"></script>
+>>>>>>> 3f32e31d12c4d6c3017ba7c88f2c39d4c41b7fde
     </body>
 </html>

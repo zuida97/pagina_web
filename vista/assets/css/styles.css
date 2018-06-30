@@ -1,5 +1,10 @@
 body{
   margin: -1px;
+  background-image: url("../img/domotica.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -26,15 +31,23 @@ ul#menu-main{
   background-color: #175c78;
 }
 
-footer{
-  background-color: #1d506a;
-  color: white;
-  height: 250px;
-  margin-top: 2px;
-}
 
 .centro{
   text-align: center;
+}
+
+/* FOOTER */
+#footer li{
+  display:inline-block;
+  margin-left: 10px;
+}
+
+#footer{
+  text-align: center;
+}
+
+#panel {
+    background-color: #2879a3;
 }
 
 
@@ -153,13 +166,3 @@ footer{
   from {opacity: .4}
   to {opacity: 1}
 }
-
- /* FOOTE */
- #footer li{
-   display: inline-block;
-   margin-left: 10px;
- }
-
- #footer{
-   text-align: center;
- }
