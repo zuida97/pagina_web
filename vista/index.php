@@ -15,7 +15,7 @@
           <?php
             require_once 'menu.html';
            ?>
-        </div> 
+        </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
         <section>
           <?php
