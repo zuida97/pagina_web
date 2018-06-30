@@ -13,7 +13,7 @@
         </section>
     </section>
 
-    <form class="form_contacto" action="index.php" method="post">
+    <form class="form_contacto" action="contacto.php" method="post">
       <h3>Contáctese con nosotros</h3>
       <div class="user_info">
         <label>*Nombre completo:</label>
