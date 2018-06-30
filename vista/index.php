@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>inicio</title>
+
     </head>
-    <body>
+    <body >
         <!-- HEADER DE LA PAGINA -->
         <header>
           <h1>CABECERA DE LA PAGINA</h1>
@@ -59,4 +60,9 @@
         </footer>
         </article>
     </body>
+
+      <script src="assets/js/jquery-1.11.0.min.js"></script>
+      <script src="assets/js/menu_desplegable.js"></script>
+      <script src="assets/js/slider.js"></script>
+
 </html>

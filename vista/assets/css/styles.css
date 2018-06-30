@@ -1,36 +1,96 @@
 body{
-  margin: -1px;
-  background-image: url("../img/domotica.jpg");
+  margin: 0px;
+  /* background-image: url("../img/domotica.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
+nav ul{
+  padding: 0;
 
+}
+
+nav ul ul{
+  display: none;
+
+}
 ul#menu-main{
   border: 1px solid white;
   background-color: #1d506a;
   height: 50px;
-  margin-top: 100px;
+  margin-top: 90px;
   margin-bottom: 2px;
   text-align: center;
-
 }
+
 #menu-main li{
-  display: inline-block;
+  display: block;
   width: 200px;
   height: 35px;
   margin-left: 10px;
   padding-top: 15px;
   color: white;
+  position: relative;
+  right: 100px;
+  left: 50px;
 }
+
+#menu-main li{
+  float: left;
+
+}
+
 #menu-main li:hover{
   width: 200px;
   height: 35px;
-  background-color: #175c78;
+  background-color: #287095;
+}
+#menu-main li li:hover{
+  width: 0;
+  height: 0;
 }
 
+
+#acceso{
+  color: white;
+  text-decoration: none;
+
+}
+
+#login-form {
+  position: relative;
+  z-index: 999;
+  width:220px;
+  height: 170px;
+  padding-top: 10px;
+  padding-left: 30px;
+  text-align: left;
+  top:4px;
+  right: 150px;
+  background-color: white;
+  border:1px solid #ccc;
+  border-radius: 10px 0px 10px 10px;
+
+}
+
+
+input#user , input#pass{
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 6px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 180px;
+  border-radius: 5px;
+}
+#submit{
+  margin-top: 10px;
+  height: 25px;
+  width: 192px;
+  cursor: pointer;
+}
 
 .centro{
   text-align: center;
@@ -52,8 +112,10 @@ footer.pie_pagina{
   width: 400;
 }
 
-#panel {
-    background-color: #2879a3;
+footer {
+    background-color: #1d506a;
+    margin-bottom: 0px;
+    color: white;
 }
 
 
