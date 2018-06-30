@@ -15,7 +15,7 @@
           <?php
             require_once 'menu.html';
            ?>
-        </div>
+        </div> 
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
         <section>
           <?php
@@ -57,4 +57,5 @@
         </footer>
         </article>
     </body>
+      <script src="assets/js/slider.js"></script>
 </html>

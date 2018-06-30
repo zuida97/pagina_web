@@ -1,22 +1,21 @@
 body{
-  margin: -1px;
-  background-image: url("../img/domotica.jpg");
+  margin: 0px;
+  /* background-image: url("../img/domotica.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-
 ul#menu-main{
   border: 1px solid white;
   background-color: #1d506a;
   height: 50px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 2px;
   text-align: center;
-
 }
+
 #menu-main li{
   display: inline-block;
   width: 200px;
@@ -24,11 +23,19 @@ ul#menu-main{
   margin-left: 10px;
   padding-top: 15px;
   color: white;
+  position: relative;
+  right: 100px;
 }
+
+#login li{
+  position: relative;
+  left: 100px;
+}
+
 #menu-main li:hover{
   width: 200px;
   height: 35px;
-  background-color: #175c78;
+  background-color: #287095;
 }
 
 
@@ -46,8 +53,10 @@ ul#menu-main{
   text-align: center;
 }
 
-#panel {
-    background-color: #2879a3;
+footer {
+    background-color: #1d506a;
+    margin-bottom: 0px;
+    color: white;
 }
 
 
