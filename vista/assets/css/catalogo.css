@@ -14,9 +14,6 @@
     width: 180px;
     height:200px;
 }
-#imagen1 h3{
-    color:rgb(84, 101, 254);
-}
 #imagen2{
     margin-top: 0;
     background-image: url("../img/catalogo/catCamara.jpg");
@@ -31,4 +28,9 @@
     background-size:cover;
     width: 400px;
     height:200px;
+}
+#visible{
+    color: white;
+    font-size: 30px;
+    text-shadow: -1px -1px 1px #1d506a, 2px 2px 2px #1d506a;
 }
