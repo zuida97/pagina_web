@@ -28,7 +28,7 @@
                 require_once 'nosotros.php';
                 break;
               case 3:
-                require_once 'serviciosycatalogo.php';
+                require_once 'catalogo/serviciosycatalogo.html';
                 break;
               case 4:
                 require_once 'contacto.php';
