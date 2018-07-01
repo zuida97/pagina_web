@@ -33,8 +33,17 @@
               case 4:
                 require_once 'contacto.php';
                 break;
+                case 5:
+                    require_once 'catalogo/CatalogoAlarma.html';
+                break;
+                case 6:
+                    require_once 'catalogo/Catalogocamaras.html';
+                break;
+                case 7:
+                    require_once 'catalogo/CatalogoHumo.html';
+                break;
               default:
-                require_once 'inicio.html';
+                require_once 'error.html';
                 break;
             }
            ?>
