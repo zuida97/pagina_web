@@ -17,7 +17,7 @@
            ?>
         </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
-        <section class="pagcargada">
+        <section class="pagcargada" onclick="ocultar()">
           <?php
             $modulo = (isset($_GET['mod'])) ? $_GET['mod'] : null;
             switch ($modulo) {
