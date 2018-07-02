@@ -25,6 +25,7 @@ function Acceder(){
     }
     else{
         $msj ="Error, Contactese con el administrador";
+        return $msj;
     }
 }
 

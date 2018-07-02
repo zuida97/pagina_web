@@ -11,14 +11,18 @@ if(isset($_SESSION['usuario']))
     <title></title>
   </head>
   <body>
-    <header>
-      <nav>
-        <?php
-          require_once "menu-usuario.html";
-         ?>
-      </nav>
 
-    </header>
+    <div class="">
+      <header>
+        <nav>
+          <?php
+            require_once "menu-usuario.html";
+           ?>
+        </nav>
+
+      </header>
+    </div>
+
     <?php
       echo "Bienvenido ".$_SESSION['usuario']->nombres;
      ?>
@@ -29,15 +33,15 @@ if(isset($_SESSION['usuario']))
            case 1:
                 header("Location: ../index.php");
              break;
-           // case 2:
-           //   require_once 'nosotros.php';
-           //   break;
-           // case 3:
-           //   require_once 'catalogo/serviciosycatalogo.html';
-           //   break;
-           // default:
-           //   require_once 'inicio.html';
-           //   break;
+           case 2:
+              require_once 'form-productos.php';
+             break;
+           case 3:
+             require_once 'form-servicios.php';
+             break;
+           default:
+             require_once 'index.php';
+             break;
          }
 
         ?>

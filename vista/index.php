@@ -53,7 +53,7 @@ require_once "../modelo/class.usuario.php";
                 break;
             }
 
-            Acceder();
+            $resp = Acceder();
 
 
            ?>
