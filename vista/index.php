@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+require_once '../controlador/controlador.usuario.php';
+require_once "../modelo/class.usuario.php";
+
+?>
+ <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
@@ -13,7 +18,8 @@
         <!-- CARGA EL MENU A lA PAGINA CUANDO SE INGRESA POR DEFAULT -->
         <div class="">
           <?php
-            require_once 'menu.html';
+            require_once 'menu.php';
+
            ?>
         </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
@@ -43,9 +49,13 @@
                     require_once 'catalogo/CatalogoHumo.html';
                 break;
               default:
-                require_once 'error.html';
+                require_once 'inicio.html';
                 break;
             }
+
+            Acceder();
+
+
            ?>
         </section>
         <article>
@@ -68,7 +78,7 @@
         </footer>
         </article>
     </body>
-
+      <script src="assets/js/motor.ajax.js"></script>
       <script src="assets/js/jquery-1.11.0.min.js"></script>
       <script src="assets/js/menu_desplegable.js"></script>
       <script src="assets/js/slider.js"></script>

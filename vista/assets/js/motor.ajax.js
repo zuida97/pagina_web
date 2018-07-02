@@ -20,8 +20,8 @@ function login()
     if(user!="" && pass!="")
     {
         post = "u=" + user + "&p=" + pass;
+        xmlhttp.open("POST","../controlador/controlador.usuario.php", true);
         xmlhttp.onreadystatechange = estadoLogin;
-        xmlhttp.open("POST","../controlador/controlador.usuario.php",true);
         xmlhttp.send(post);
     }else{
       alert('Ingrese usuario y clave.');
@@ -39,6 +39,7 @@ function estadoLogin()
     if(xmlhttp.status == 200)
     {
       var resp = xmlhttp.responseText;
+      alert(xmlhttp.statusText)
       if(resp)
       {
         window.location.href = '../controlador/controlador.usuario.php';

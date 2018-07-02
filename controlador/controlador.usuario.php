@@ -1,36 +1,40 @@
 <?php
 session_start();
-require_once "../modelo/class.usuario.php";
 require_once "../modelo/class.usuarioDAO.php";
+require_once "../modelo/class.usuario.php";
 
 
-
-if(isset($_POST['u']) && isset($_POST['p'])){
-
-    $user = trim($_POST['u']);
-    $clave = sha1(trim($_POST['p']));
-    echo "hola";
-    $usuarioDAO = new UsuarioDAO();
-    $r = Login($user, $clave); // Login() retornará un valor boolean falso o un objeto de tipo Usuario inicializado
-    if(!$r){
-      $resp = false;
+function Acceder(){
+    if(isset($_POST['acceder'])){
+        $user = trim($_POST['user']);
+        $clave = sha1(trim($_POST['pass']));
+        if($user != "" && $clave != ""){
+            $usuarioDAO = new UsuarioDAO();
+            $r = $usuarioDAO->Login($user, $clave); // Login() retornará un valor boolean falso o un objeto de tipo Usuario inicializado
+            if(!$r){
+                $resp = false;
+                echo  "clave incorrecta";
+            }
+            else{
+                $_SESSION['usuario'] = $r;
+                header("Location: usuario/index.php");
+                $resp = true;
+            }
+            return $resp;
+        }
     }
     else{
-      $_SESSION['usuario'] = $r;
-      $resp = true;
+        $msj ="Error, Contactese con el administrador";
     }
-    echo $resp;
-  }
-  else{
-    echo "No funca";
-
-  }
+}
 
 
 
 
 
-  
+
+
+
 // }
 //
 //

@@ -3,11 +3,16 @@
   <a href="?mod=2"><li>NOSOTROS</li></a>
   <a href="?mod=3"><li style="padding-left:30px; padding-right:30px">SERVICIOS Y CATALOGO</li></a>
   <a href="?mod=4" ><li>CONTACTO</li></a>
+<?php
+  if(!isset($_SESSION['usuario']))
+  {
+ ?>
+
   <a id="acceso" href="#" ondblclick="ocultar()"><li style="margin-left: 120px; text-align:right"> ACCESO <img style="margin-left:20px; padding-right:20px" src="assets/img/iniciar_sesion.png" alt="">
   <ul>
     <li>
       <div id="login-form">
-        <form class=""  >
+        <form method="post">
           <div class="">
             <input id="user" type="text" name="user" value="" placeholder="Usuario">
           </div>
@@ -15,11 +20,19 @@
             <input id="pass" type="password" name="pass" value="" placeholder="Contraseña">
           </div>
           <div class="">
-            <input id="submit" type="button" name="entrar" value="Entrar" onclick="login()">
+            <button  id="submit" type="submit" name="acceder">Acceder</button>
           </div>
         </form>
       </div>
     </li>
   </ul>
   </li></a>
+<?php
+}
+else{
+ ?>
+ <a href="usuario/index.php"><li>MI PERFIL</li></a>
+
+<?php } ?>
+
 </ul>
