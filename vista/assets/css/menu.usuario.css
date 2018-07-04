@@ -41,3 +41,18 @@ h3{
   font-size: 35px;
   font-family: sans-serif;
 }
+
+ #cerrar{
+  font-size: 15px;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  left: 81%;
+  border: none;
+  background-color: white;
+}
+#cerrar:hover{
+  color: #ce7d35;
+  transition: all .3s;
+}

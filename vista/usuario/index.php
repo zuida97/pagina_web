@@ -14,7 +14,8 @@ if(isset($_SESSION['usuario']))
   <body>
       <header class="hd">
             <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;  ?></p>
-            <?php require_once "menu-usuario.html";?>
+            <?php require_once "menu-usuario.php";?>
+          
       </header>
      <section>
        <?php
