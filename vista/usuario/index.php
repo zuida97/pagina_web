@@ -8,24 +8,14 @@ if(isset($_SESSION['usuario']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/index2.css">
     <title></title>
   </head>
   <body>
-
-    <div class="">
-      <header>
-        <nav>
-          <?php
-            require_once "menu-usuario.html";
-           ?>
-        </nav>
-
+      <header class="hd">
+            <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;  ?></p>
+            <?php require_once "menu-usuario.html";?>
       </header>
-    </div>
-
-    <?php
-      echo "Bienvenido ".$_SESSION['usuario']->nombres;
-     ?>
      <section>
        <?php
          $modulo = (isset($_GET['vst'])) ? $_GET['vst'] : null;
