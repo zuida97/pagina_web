@@ -3,7 +3,6 @@ require_once "../../modelo/class.productoDAO.php";
 require_once "../../modelo/class.producto.php";
 
  ?>
-<link rel="stylesheet" href="../assets/css/form.productos.css">
 <div class="contenedor">
   <form class="form" action="?vst=2" method="post" enctype="multipart/form-data">
     <h2>Ingresar un producto</h2>

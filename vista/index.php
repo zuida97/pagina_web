@@ -4,6 +4,10 @@ require_once "../modelo/class.usuario.php";
 require_once "../modelo/class.producto.php";
 require_once "../modelo/class.productoDAO.php";
 require_once "../controlador/controlador.producto.php";
+require_once "../modelo/class.servicio.php";
+require_once "../modelo/class.servicioDAO.php";
+require_once "../controlador/controlador.servicio.php";
+
 
 ?>
  <!DOCTYPE html>
@@ -17,8 +21,9 @@ require_once "../controlador/controlador.producto.php";
     <body >
         <!-- HEADER DE LA PAGINA -->
         <header>
-          <h1>CABECERA DE LA PAGINA</h1>
+          <img src="assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;">
         </header>
+
         <!-- CARGA EL MENU A lA PAGINA CUANDO SE INGRESA POR DEFAULT -->
         <div class="">
           <?php
@@ -38,16 +43,16 @@ require_once "../controlador/controlador.producto.php";
                 require_once 'nosotros.php';
                 break;
               case 3:
-                require_once 'catalogo/catalogoproductos.php';
+                require_once 'catalogo/serviciosycatalogo.html';
                 break;
               case 4:
                 require_once 'contacto.php';
                 break;
                 case 5:
-                    require_once 'catalogo/CatalogoAlarma.html';
+                    require_once 'catalogo/catalogoproductos.php';
                 break;
                 case 6:
-                    require_once 'catalogo/Catalogocamaras.html';
+                    require_once 'catalogo/catalogoservicios.php';
                 break;
                 case 7:
                     require_once 'catalogo/CatalogoHumo.html';
@@ -77,7 +82,7 @@ require_once "../controlador/controlador.producto.php";
               </ul>
           </div>
           <div>
-              <p class="centro">&copy; 2018 <a href="" id="pie"></a>Todos los derechos reservados</p>
+              <p class="centro">&copy; 2018 <a href="?" id="pie"> SOTECH </a>Todos los derechos reservados</p>
           </div>
         </footer>
         </article>

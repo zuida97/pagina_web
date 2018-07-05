@@ -8,6 +8,7 @@ if(isset($_SESSION['usuario']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/form.productos.css">
     <link rel="stylesheet" href="../assets/css/index2.css">
     <title></title>
   </head>
@@ -15,7 +16,7 @@ if(isset($_SESSION['usuario']))
       <header class="hd">
             <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;  ?></p>
             <?php require_once "menu-usuario.php";?>
-          
+
       </header>
      <section>
        <?php

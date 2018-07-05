@@ -3,7 +3,7 @@
 
 function AgregarProducto(){
   if(isset($_POST['guardar'])){
-      $codigo = $_POST['codigo']; 
+      $codigo = $_POST['codigo'];
       $nombre = $_POST['nombre'];
       $descripcion = $_POST['descripcion'];
       $tipo = $_POST['tipo'];
@@ -42,7 +42,7 @@ function ListarProductos($tipo = null){
                 <th>Tipo</th>
                 <th>Costo</th>
                 <th>Cantidad</th>
-                <th>Imagen</th>
+                <th>Imagen de referencia</th>
               </tr>';
         foreach ($resp as $key => $value) {
             $imagen = "assets/archivos/".$value['archivo'];
@@ -53,7 +53,7 @@ function ListarProductos($tipo = null){
                   <td>'.$value['tipo_producto'].'</td>
                   <td>'.$value['costo_prod'].'</td>
                   <td>'.$value['cant_prod'].'</td>
-                  <td><img style="width:200px; height:250px" src='.$imagen.'></td>
+                  <td><img style="width:200px; height:200px" src='.$imagen.'></td>
                </tr>';
   }
         $tabla.='</table>';

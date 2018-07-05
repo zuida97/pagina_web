@@ -22,13 +22,7 @@
     width: 300px;
     height:200px;
 }
-#imagen3{
-    background-image: url("../img/catalogo/catDetector.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    width: 400px;
-    height:200px;
-}
+
 #visible{
     color: white;
     font-size: 30px;
@@ -36,7 +30,29 @@
 }
 
 
-table, th, tr, td {
-  border: 1px solid #598195;
-  border-collapse: collapse;
+table{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  opacity: 30%;
+}
+
+th{
+  height: 40px;
+  background-color: rgba(59, 59, 59, 0.55);
+
+}
+
+
+tr:hover{
+  background-color: rgb(126, 158, 255);
+
+}
+
+
+
+td, th{
+  width:300px;
+
 }

@@ -31,7 +31,7 @@
 }
 else{
  ?>
- <a href="usuario/index.php"><li>MI PERFIL</li></a>
+ <a href="usuario/index.php" style="margin-left: 120px"><li>MI PERFIL</li></a>
 
 <?php } ?>
 
