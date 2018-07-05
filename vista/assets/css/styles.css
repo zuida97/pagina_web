@@ -136,12 +136,13 @@ footer {
 }
 
 .detalle{
-    color: white;
+    color: rgb(255, 255, 255);
+    font-family: "Galada";
     font-size: 50px;
     text-shadow: -1px -1px 1px #1d506a, 2px 2px 2px #1d506a;
     font-weight: bold;
     position: absolute;
-    bottom:30%;
+    bottom:40%;
     left:56%;
 
 }
@@ -234,4 +235,8 @@ footer {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+@font-face {
+    font-family: "Galada";
+    src: url('../font/Galada/Galada-Regular.ttf');
 }
