@@ -3,14 +3,12 @@ img{
   width: 100%;
 }
 
-.contenedor{
-  background: #e2e2e2;
-}
+
 
 .portafolio{
   max-width: 1400px;
   width: 90%;
-  margin: auto;
+  margin: 30px auto;
 }
 
 .portafolio h2{
