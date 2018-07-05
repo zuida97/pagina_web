@@ -19,6 +19,45 @@ function AgregarProducto(){
 
 }
 
+function ListarProductos($tipo){
+    $producto = new ProductoDAO();
+    $resp = $producto->listar($tipo);
+    if(gettype($resp)=="array"){
+        $tabla = '<table border="1px">
+              <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Costo</th>
+                <th>Cantidad</th>
+              </tr>';
+        foreach ($resp as $key => $value) {
+            $tabla.='<tr>
+                  <td>'.$value['cod_producto'].'</td>
+                  <td>'.$value['nom_producto'].'</td>
+                  <td>'.$value['desc_producto'].'</td>
+                  <td>'.$value['tipo_producto'].'</td>
+                  <td>'.$value['costo_prod'].'</td>
+                  <td>'.$value['cant_prod'].'</td>
+               </tr>';
+  }
+        $tabla.='</table>';
+
+  }else{
+  $tabla = "Lista no disponible por el momento.";
+}
+
+return $tabla;
+
+
+}
+
+
+
+
+
+
 
 
 

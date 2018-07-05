@@ -1,6 +1,9 @@
 <?php
 require_once '../controlador/controlador.usuario.php';
 require_once "../modelo/class.usuario.php";
+require_once "../modelo/class.producto.php";
+require_once "../modelo/class.productoDAO.php";
+require_once "../controlador/controlador.producto.php";
 
 ?>
  <!DOCTYPE html>
@@ -34,7 +37,7 @@ require_once "../modelo/class.usuario.php";
                 require_once 'nosotros.php';
                 break;
               case 3:
-                require_once 'catalogo/serviciosycatalogo.html';
+                require_once 'catalogo/catalogoproductos.php';
                 break;
               case 4:
                 require_once 'contacto.php';
