@@ -5,7 +5,7 @@ require_once "../../modelo/class.producto.php";
  ?>
 <link rel="stylesheet" href="../assets/css/form.productos.css">
 <div class="contenedor">
-  <form class="form" action="?vst=2" method="post">
+  <form class="form" action="?vst=2" method="post" enctype="multipart/form-data">
     <h2>Ingresar un producto</h2>
     <div class="ingreso">
       <label for="">Código producto</label>
@@ -25,6 +25,9 @@ require_once "../../modelo/class.producto.php";
       <input type="text" name="costo" value="">
       <label for="">Cantidad</label></div>
       <input type="text" name="cantidad" value="" id="cantidad">
+      <div class="">
+        <input type="file" name="imagen">
+      </div>
       <div><button type="submit" name="guardar" id="btnguardar">Guardar</button></div>
     </div>
   </form>

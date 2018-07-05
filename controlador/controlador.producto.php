@@ -3,14 +3,19 @@
 
 function AgregarProducto(){
   if(isset($_POST['guardar'])){
-      $codigo = $_POST['codigo'];
+      $codigo = $_POST['codigo']; 
       $nombre = $_POST['nombre'];
       $descripcion = $_POST['descripcion'];
       $tipo = $_POST['tipo'];
       $costo = $_POST['costo'];
       $cantidad = $_POST['cantidad'];
+      $archivo = $_FILES['imagen']['name'];
+      $ruta_tmp = $_FILES['imagen']['tmp_name'];
+      $ruta = "../assets/archivos/".$archivo;
+      move_uploaded_file($ruta_tmp,$ruta);
+
       if($codigo != ""  && $nombre != ""  && $descripcion != "" &&  $tipo != "" &&  $costo != "" &&  $cantidad != ""){
-          $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad);
+          $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad, $archivo);
           $prodDAO = new ProductoDAO();
           $prodDAO->Agregar($obj_producto);
           echo "registro guardado";
@@ -37,8 +42,10 @@ function ListarProductos($tipo = null){
                 <th>Tipo</th>
                 <th>Costo</th>
                 <th>Cantidad</th>
+                <th>Imagen</th>
               </tr>';
         foreach ($resp as $key => $value) {
+            $imagen = "assets/archivos/".$value['archivo'];
             $tabla.='<tr>
                   <td>'.$value['cod_producto'].'</td>
                   <td>'.$value['nom_producto'].'</td>
@@ -46,6 +53,7 @@ function ListarProductos($tipo = null){
                   <td>'.$value['tipo_producto'].'</td>
                   <td>'.$value['costo_prod'].'</td>
                   <td>'.$value['cant_prod'].'</td>
+                  <td><img style="width:200px; height:250px" src='.$imagen.'></td>
                </tr>';
   }
         $tabla.='</table>';
