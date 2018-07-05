@@ -5,7 +5,9 @@
   width: 90%;
   margin: 30px auto;
 }
-
+.portafolio> h2{
+    font-family: "Galada";
+}
 .portafolio h2{
   text-align: center;
   font-size: 30px;
@@ -28,6 +30,7 @@
 }
 
 .portafolio-text{
+
   position: absolute;
   bottom: 0;
 
@@ -48,4 +51,8 @@
 }
 .portafolio-item:hover .portafolio-img{
   transform: scale(1.15);
+}
+@font-face {
+    font-family: "Galada";
+    src: url('../font/Galada/Galada-Regular.ttf');
 }
