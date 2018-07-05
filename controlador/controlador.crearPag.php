@@ -9,5 +9,9 @@
 
                     </body>
                 </html>';
+<<<<<<< HEAD
                 file_put_contents('producto.php',$contenido)
+=======
+                file_put_contents()
+>>>>>>> master
 ?>
