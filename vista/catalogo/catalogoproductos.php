@@ -2,8 +2,7 @@
   <div class="">
 
     <?php
-
-      echo ListarProductos('Alarma');
+      echo ListarProductos();
      ?>
   </div>
 

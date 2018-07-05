@@ -11,6 +11,7 @@ require_once "../controlador/controlador.producto.php";
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/catalogo.css">
         <title>Home</title>
     </head>
     <body >

@@ -19,11 +19,17 @@ function AgregarProducto(){
 
 }
 
-function ListarProductos($tipo){
+function ListarProductos($tipo = null){
     $producto = new ProductoDAO();
-    $resp = $producto->listar($tipo);
+    if($tipo == null){
+        $resp = $producto->listar();
+    }
+    else{
+      $resp = $producto->listarporTipo($tipo);
+    }
+
     if(gettype($resp)=="array"){
-        $tabla = '<table border="1px">
+        $tabla = '<table>
               <tr>
                 <th>Codigo</th>
                 <th>Nombre</th>

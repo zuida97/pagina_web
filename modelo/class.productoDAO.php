@@ -15,7 +15,16 @@ class ProductoDAO
         $conexion->InMoEl($sql);
     }
 
-    public function listar($tipo){
+    public function listar(){
+        $conexion = new Conexion();
+        $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+         costo_prod, cant_prod FROM tbl_productos ORDER BY cod_producto";
+        $resp = $conexion->Consulta($sql);
+        return $resp;
+    }
+
+
+    public function listarporTipo($tipo = null){
         $conexion = new Conexion();
         $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
          costo_prod, cant_prod FROM tbl_productos WHERE tipo_producto ='$tipo' ORDER BY cod_producto";
@@ -24,6 +33,7 @@ class ProductoDAO
     }
 
 
+    
 
 }
 

@@ -34,3 +34,9 @@
     font-size: 30px;
     text-shadow: -1px -1px 1px #1d506a, 2px 2px 2px #1d506a;
 }
+
+
+table, th, tr, td {
+  border: 1px solid #598195;
+  border-collapse: collapse;
+}
