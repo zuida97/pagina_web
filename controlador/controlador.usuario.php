@@ -11,6 +11,7 @@ function Acceder(){
         if($user != "" && $clave != ""){
             $usuarioDAO = new UsuarioDAO();
             $r = $usuarioDAO->Login($user, $clave); // Login() retornará un valor boolean falso o un objeto de tipo Usuario inicializado
+
             if(!$r){
                 $resp = false;
                 echo  "Usuario/Clave incorrecta";
@@ -18,6 +19,7 @@ function Acceder(){
             else{
                 $_SESSION['usuario'] = $r;
                 header("Location: usuario/index.php");
+
                 $resp = true;
             }
             return $resp;

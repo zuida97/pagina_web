@@ -18,22 +18,60 @@ body{
   list-style: none;
 }
 
-.menu li{
+.menu > li{
   position: relative;
   display: inline-block;
 }
 
+
 .menu > li > a{
-  display: block;
   padding: 15px 20px;
   color: #353535;
   font-family: sans-serif;
   text-decoration: none;
+  margin: 5px 10px 5px 10px;
+  background: white;
+  display: block;
+
 }
-.menu > li > a:hover{
+
+
+.menu  li  a:hover{
   color: #ce7d35;
   transition: all .3s;
+  width: 100%;
+
+/* Submenú */
 }
+.submenu{
+  position: absolute;
+  left:10px;
+  background-color: white;
+  width: 100%;
+  visibility: hidden;
+}
+
+.submenu li a{
+  display: block;
+  padding: 15px;
+  color: black;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.menu li:hover .submenu{
+  visibility: visible;
+
+}
+.submenu li:hover{
+  background-color: #313D52;
+  border: 1px solid white;
+}
+
+
+
 
 h3{
   text-align: center;
@@ -47,10 +85,13 @@ h3{
   font-weight: bold;
   width: 200px;
   height: 50px;
-  position: relative;
-  left: 81%;
   border: none;
-  background-color: white;
+  background: none;
+  position: relative;
+  left: 73%;
+  color: black;
+s
+
 }
 #cerrar:hover{
   color: #ce7d35;

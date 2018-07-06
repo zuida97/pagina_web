@@ -4,6 +4,8 @@
   <a href="?mod=3"><li style="padding-left:30px; padding-right:30px">SERVICIOS Y CATALOGO</li></a>
   <a href="?mod=4" ><li>CONTACTO</li></a>
 <?php
+  $resp = Acceder();
+  
   if(!isset($_SESSION['usuario']))
   {
  ?>

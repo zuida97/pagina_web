@@ -6,8 +6,12 @@ require_once "../../controlador/controlador.servicio.php";
 
 
 session_start();
-if(isset($_SESSION['usuario']))
+if(!isset($_SESSION['usuario']))
 {
+  header("Location: ../index.php");
+}
+else{
+
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -20,7 +24,23 @@ if(isset($_SESSION['usuario']))
   <body>
       <header class="hd">
             <img src="../assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;">
-            <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;  ?></p>
+            <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;?></p>
+            
+            <form class="" method="post">
+              <button type="submit" name="salir" id="cerrar">CERRAR SESIÓN</button></a>
+              </form>
+              <?php
+              if(isset($_POST['salir'])){
+                  if(isset($_SESSION['usuario'])){
+                      session_destroy();
+                      echo "<meta content='0;URL=index.php?' http-equiv='REFRESH'> </meta>";
+                }
+            }
+
+            ?>
+
+
+
             <?php require_once "menu-usuario.php";?>
 
       </header>
@@ -53,9 +73,5 @@ if(isset($_SESSION['usuario']))
   </body>
 </html>
  <?php
-
-}
-else{
-  header("Location: ../index.php");
 }
 ?>

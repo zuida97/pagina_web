@@ -63,10 +63,6 @@ require_once "../controlador/controlador.servicio.php";
                 require_once 'inicio.html';
                 break;
             }
-
-            $resp = Acceder();
-
-
            ?>
         </section>
         <article>
