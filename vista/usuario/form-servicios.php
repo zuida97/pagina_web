@@ -8,6 +8,14 @@
       <textarea name="descripcion_servicio" rows="8" cols="80"></textarea>
       <label for="">Costo</label>
       <input type="text" name="costo_servicio" value="">
+      <label for="">Estado</label>
+      <div class="">
+        <select class="" name="estado_servicio">
+          <option value="">[Selecione un estado]</option>
+          <option value="0">Activado</option>
+          <option value="1">Desactivado</option>
+        </select>
+      </div>
       <div class="">
         <input type="file" name="imagen_servicio">
       </div>
@@ -15,3 +23,7 @@
     </div>
   </form>
 </div>
+<?php
+    AgregarServicio();
+
+ ?>

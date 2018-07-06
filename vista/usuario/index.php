@@ -1,5 +1,10 @@
 <?php
 require_once "../../modelo/class.usuario.php";
+require_once "../../modelo/class.servicio.php";
+require_once "../../modelo/class.servicioDAO.php";
+require_once "../../controlador/controlador.servicio.php";
+
+
 session_start();
 if(isset($_SESSION['usuario']))
 {

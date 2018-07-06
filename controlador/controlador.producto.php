@@ -13,9 +13,9 @@ function AgregarProducto(){
       $ruta_tmp = $_FILES['imagen']['tmp_name'];
       $ruta = "../assets/archivos/".$archivo;
       move_uploaded_file($ruta_tmp,$ruta);
-
+      $estado = $_POST['estado'];
       if($codigo != ""  && $nombre != ""  && $descripcion != "" &&  $tipo != "" &&  $costo != "" &&  $cantidad != ""){
-          $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad, $archivo);
+          $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad, $archivo, $estado);
           $prodDAO = new ProductoDAO();
           $prodDAO->Agregar($obj_producto);
           echo "registro guardado";
@@ -36,24 +36,24 @@ function ListarProductos($tipo = null){
     if(gettype($resp)=="array"){
         $tabla = '<table>
               <tr>
+                <th>Imagen de referencia</th>
                 <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Tipo</th>
                 <th>Costo</th>
                 <th>Cantidad</th>
-                <th>Imagen de referencia</th>
               </tr>';
         foreach ($resp as $key => $value) {
             $imagen = "assets/archivos/".$value['archivo'];
             $tabla.='<tr>
+                  <td><img style="width:200px; height:200px; border-left:30px solid white;border-right:30px solid white" src='.$imagen.'></td>
                   <td>'.$value['cod_producto'].'</td>
                   <td>'.$value['nom_producto'].'</td>
                   <td>'.$value['desc_producto'].'</td>
                   <td>'.$value['tipo_producto'].'</td>
                   <td>'.$value['costo_prod'].'</td>
                   <td>'.$value['cant_prod'].'</td>
-                  <td><img style="width:200px; height:200px" src='.$imagen.'></td>
                </tr>';
   }
         $tabla.='</table>';

@@ -6,17 +6,18 @@ class Servicio
   public $nom_servicio;
   public $desc_servicio;
   public $costo_servicio;
-  public $archivo;
+  public $archivo_servicio;
+  public $estado_servicio;
 
 
-  function __construct($id_servicio = null, $nom_servicio = null, $desc_servicio = null,
-  $costo_servicio = null, $archivo = null){
+  function __construct($nom_servicio = null, $desc_servicio = null,
+  $costo_servicio = null, $archivo_servicio = null, $estado_servicio = null){
 
-      $this->id_servicio = $id_servicio;
       $this->nom_servicio = $nom_servicio;
       $this->desc_servicio = $desc_servicio;
       $this->costo_servicio = $costo_servicio;
-      $this->archivo = $archivo;
+      $this->archivo_servicio = $archivo_servicio;
+      $this->estado_servicio = $estado_servicio;
   }
 }
 

@@ -25,6 +25,16 @@ require_once "../../modelo/class.producto.php";
       <label for="">Cantidad</label></div>
       <input type="text" name="cantidad" value="" id="cantidad">
       <div class="">
+        <label for="">Estado</label>
+      </div>
+      <div class="">
+        <select class="" name="estado">
+          <option value="">[Selecione un estado]</option>
+          <option value="0">Activado</option>
+          <option value="1">Desactivado</option>
+        </select>
+      </div>
+      <div class="">
         <input type="file" name="imagen">
       </div>
       <div><button type="submit" name="guardar" id="btnguardar">Guardar</button></div>

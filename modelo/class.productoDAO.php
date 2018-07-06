@@ -10,9 +10,9 @@ class ProductoDAO
     public function Agregar($obj_producto){
         $conexion = new Conexion();
         $sql = "INSERT INTO tbl_productos(cod_producto, nom_producto, desc_producto, tipo_producto,
-        costo_prod, cant_prod, archivo) VALUES('$obj_producto->codigo', '$obj_producto->nombre',
+        costo_prod, cant_prod, archivo, estado) VALUES('$obj_producto->codigo', '$obj_producto->nombre',
         '$obj_producto->descripcion', '$obj_producto->tipo', '$obj_producto->costo','$obj_producto->cantidad',
-        '$obj_producto->archivo')";
+        '$obj_producto->archivo', '$obj_producto->estado')";
         $conexion->InMoEl($sql);
     }
 

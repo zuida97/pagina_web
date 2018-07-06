@@ -9,8 +9,10 @@ class Producto
   public $costo;
   public $cantidad;
   public $archivo;
+  public $estado;
 
-  function __construct($codigo= null, $nombre= null, $descripcion= null, $tipo= null, $costo= null, $cantidad= null,$archivo=null)
+  function __construct($codigo = null, $nombre = null, $descripcion = null, $tipo = null,
+   $costo = null, $cantidad = null,$archivo =null, $estado = null)
   {
   $this->codigo = $codigo;
   $this->nombre = $nombre;
@@ -19,6 +21,7 @@ class Producto
   $this->costo = $costo;
   $this->cantidad = $cantidad;
   $this->archivo = $archivo;
+  $this->estado = $estado;
   }
 }
 
