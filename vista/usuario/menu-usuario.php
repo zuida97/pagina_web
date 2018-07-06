@@ -11,9 +11,9 @@
         <li><a href="#" >ELIMINAR</a></li>
       </ul>
     </li>
-    <li><a href="?vst=3">ADMINISTRAR SERVICIOS</a>
+    <li><a href="#">ADMINISTRAR SERVICIOS</a>
       <ul class="submenu">
-        <li><a href="#" >INGRESAR</a></li>
+        <li><a href="?vst=3" >INGRESAR</a></li>
         <li><a href="#" >BUSCAR</a></li>
         <li><a href="#" >MODIFICAR</a></li>
         <li><a href="#" >ELIMINAR</a></li>
