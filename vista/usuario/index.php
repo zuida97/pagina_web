@@ -19,6 +19,7 @@ if(isset($_SESSION['usuario']))
   </head>
   <body>
       <header class="hd">
+            <img src="../assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;">
             <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;  ?></p>
             <?php require_once "menu-usuario.php";?>
 
@@ -36,6 +37,9 @@ if(isset($_SESSION['usuario']))
            case 3:
              require_once 'form-servicios.php';
              break;
+             case 4:
+                require_once 'form-nosotros.php';
+                break;
            default:
              require_once 'index.php';
              break;

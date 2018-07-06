@@ -1,4 +1,3 @@
-
 <article class="">
     <div id="panel">
       <section>
