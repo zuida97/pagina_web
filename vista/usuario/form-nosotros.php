@@ -3,9 +3,21 @@
         <h1>Modificar Nosotros</h1>
         <div class="ingreso">
             <label for="">titulo:</label>
-            <input type="text" name="qs" value="">
+            <input type="text" name="tquienes" value="">
             <label for="">detalle</label>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea id="nosotros" name="dquienes" rows="3" cols="80"></textarea>
+
+            <label for="">titulo:</label>
+            <input type="text" name="tmision" value="">
+            <label for="">detalle</label>
+            <textarea id="nosotros" name="dmision" rows="3" cols="80"></textarea>
+
+            <label for="">titulo:</label>
+            <input type="text" name="tvision" value="">
+            <label for="">detalle</label>
+            <textarea id="nosotros" name="dvision" rows="3" cols="80"></textarea>
+
+            <div><button type="submit" name="guardar" id="btnguardar">Guardar</button></div>
         </div>
     </form>
 </div>
