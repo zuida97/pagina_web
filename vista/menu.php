@@ -5,7 +5,7 @@
   <a href="?mod=4" ><li>CONTACTO</li></a>
 <?php
   $resp = Acceder();
-  
+
   if(!isset($_SESSION['usuario']))
   {
  ?>

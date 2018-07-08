@@ -25,7 +25,7 @@ else{
       <header class="hd">
             <img src="../assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;">
             <p><?php echo "Bienvenido ".$_SESSION['usuario']->nombres;?></p>
-            
+
             <form class="" method="post">
               <button type="submit" name="salir" id="cerrar">CERRAR SESIÓN</button></a>
               </form>
@@ -64,6 +64,17 @@ else{
              require_once 'index.php';
              break;
          }
+         $modulo2 = (isset($_GET['mod'])) ? $_GET['mod'] : null;
+         switch ($modulo2) {
+           case 1:
+              require_once 'form-productos.php';
+             break;
+
+           default:
+             break;
+         }
+
+
 
         ?>
      </section>
