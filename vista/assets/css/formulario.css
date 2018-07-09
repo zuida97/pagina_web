@@ -2,7 +2,7 @@
 
 .formulario{
   width: 1050px;
-  height: 530px;
+  height: 580px;
   margin: 50px auto;
   background: white;
   display: flex;
@@ -123,63 +123,7 @@ form.form_contacto input[type="submit"]{
   cursor: pointer;
 }
 
-/* VENTANA DE VALIDACION ########### */
 
-.ventana{
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.7);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mensajes{
-  background: white;
-  box-shadow: 0px 0px 20px #000000;
-  width: 400px;
-  padding: 30px 20px 15px;
-}
-.mensajes h3{
-  text-align: center;
-  font-family: serif;
-  font-size: 20px;
-  font-weight: 400;
-}
-.mensajes h3::after{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #C5c5c5;
-  margin: 10px 0px 15px;
-}
-
-.mensajes p{
-  font-size: 16px;
-  color: #606060;
-
-}
-.mensajes p::before{
-  content: url('../img/cancel.png');
-  display: inline-block;
-  margin-top: 5px;
-  margin-right: 8px;
-}
-.mensajes #btncerrar{
-  display: inline-block;
-  padding: 3px 10px;
-  margin-top: 10px;
-  background: #E25151;
-  color: #fff;
-  border: 2px solid #B14141;
-  cursor: pointer;
-  float: right;
-  border-radius: 5px;
+.confirmacion h4{
+  color: #1d9412;
 }

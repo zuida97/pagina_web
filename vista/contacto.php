@@ -13,16 +13,25 @@
         </section>
     </section>
 
-    <form class="form_contacto" action="contacto.php" method="post">
+    <form class="form_contacto" action="#" method="post">
       <h3>Contáctese con nosotros</h3>
       <div class="user_info">
         <label>*Nombre completo:</label>
-        <input type="text" name="nombre" id="name" required>
+        <input type="text" name="nombre" id="name" required >
         <label>*Correo Electronico:</label>
         <input type="email" name="email" id="correo" required>
         <label>*Comentario:</label>
         <textarea name="comment" rows="8" cols="50" id="comentario" required></textarea>
         <input type="submit" name="enviar" value="Enviar" id="btnenviar">
+      </div>
+      <div class="confirmacion">
+        <?php
+          if(isset($_POST['enviar'])){
+            $msje = '<h4> Formulario enviado exitosamente! </h4>';
+            echo $msje;
+          }
+
+         ?>
       </div>
     </form>
 
