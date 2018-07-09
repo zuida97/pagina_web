@@ -6,6 +6,11 @@ if(isset($_GET['mod'])){
           ModificarFormularioServicio();
 
 }
+else if(isset($_GET['bus'])){
+    BuscarSerAdmin();
+
+}
+
 else{
 
 

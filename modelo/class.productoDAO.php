@@ -27,7 +27,8 @@ public function listar(){
 public function ListarPorNombre($nom){
           $conexion = new Conexion();
           $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
-           costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE nom_producto ='%$nom%'";
+           costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE nom_producto LIKE '%$nom%'
+           OR tipo_producto LIKE '%$nom%' OR cod_producto LIKE '%$nom%'";
           $resp = $conexion->Consulta($sql);
           return $resp;
 }

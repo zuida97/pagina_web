@@ -18,37 +18,51 @@ function AgregarProducto(){
                 $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad, $archivo, $estado);
                 $prodDAO = new ProductoDAO();
                 $prodDAO->Agregar($obj_producto);
-                echo "registro guardado";
+                echo '<div  class="contenedor4" style="width:1050px;" ><h4 style ="margin:30px ">Registro agregado exitosamente</h4> </div>';
+
       }
+
+      
   }
 
 }
+
+
+
+
+
+
 
 function BuscarProdAdmin(){
     $busqueda =  ' <div class="contenedor4">
       <form class="form" action="?bus=1" method="post" enctype="multipart/form-data">
           <h2>Buscar un producto</h2>
           <div class="ingreso2">
-          <input type="text" name="valor" value="" placeholder="ingrese código del producto">
+          <input type="text" name="valor" value="" placeholder="ingrese nombre, tipo o código del producto">
           <button type="submit" name="buscar">Buscar</button>
           </div>
        </form>
        </div>';
     echo $busqueda;
     if(isset($_POST['buscar'])){
+        if($_POST['valor'] != ""){
+            $valor = $_POST['valor'];
+            $resp = ListaProd($valor);
+            if($resp != false){
+                echo ListaProd($valor);
+            }else{
+                echo '<div  class="contenedor4" ><h4 style ="margin:30px ">Lo sentimos, no se encontraron resultados en la busqueda</h4> </div>';
+            }
+        }
+        else{
+            echo ListaProd();
 
+        }
 
-
-    }
-    else{
-
+    }else{
         echo ListaProd();
 
-
     }
-
-
-
 
 }
 
@@ -58,14 +72,14 @@ function BuscarProdAdmin(){
 
 function ListaProd($nom = null){
     $producto = new ProductoDAO();
-    if($tipo == null){
+    if($nom == null){
         $resp = $producto->listar();
     }
     else{
-        $resp = $producto->listarporTipo($nom);
+        $resp = $producto->ListarPorNombre($nom);
     }
 
-    if(gettype($resp)=="array"){
+    if(count($resp) !=0){
         $tabla = '<div class="contenedor3"><table class="table table-light table-hover ">
             <tr>
                 <th>Imagen de referencia</th>
@@ -87,12 +101,14 @@ function ListaProd($nom = null){
                     <td>'.$value['costo_prod'].'</td>
                     <td>'.$value['cant_prod'].'</td>
                 </tr>';
-  }
+        }
+
         $tabla.='</table></div>';
 
-  }else{
-  $tabla = "Lista no disponible por el momento.";
-}
+    }
+    else{
+        return false;
+    }
 
 return $tabla;
 
@@ -218,7 +234,8 @@ function ModificarFormulario(){
             $obj_producto = new Producto($codigo, $nombre, $descripcion, $tipo, $costo, $cantidad, $archivo, $estado);
             $prodDAO = new ProductoDAO();
             $prodDAO->Modificar($obj_producto);
-            echo "registro actualizado";
+            echo '<div  class="contenedor4" style="width:1050px;" ><h4 style ="margin:30px ">Registro actualizado exitosamente</h4> </div>';
+
 
       }
     }
@@ -323,7 +340,8 @@ function LLenarFormulario(){
                 return $formulario;
             }
             else{
-                return $mensaje = "Producto no encontrado";
+                return '<div  class="contenedor4" style="width:1050px;" ><h4 style ="margin:30px ">Lo sentimos, no se encontraron resultados en la busqueda</h4> </div>';
+;
 
             }
             }

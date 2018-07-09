@@ -23,11 +23,11 @@ else{
     <h2>Ingresar un producto</h2>
     <div class="ingreso">
         <label for="">Código producto</label>
-        <input type="text" name="codigo" value="">
+        <input type="text" name="codigo" value="" required>
         <label for="">Nombre producto</label>
-        <input type="text" name="nombre" value="">
+        <input type="text" name="nombre" value="" required>
         <label for="">Descripción</label>
-        <textarea name="descripcion" rows="8" cols="80"></textarea>
+        <textarea name="descripcion" rows="8" cols="80" required></textarea>
         <label for="">Tipo</label>
         <select class="" name="tipo">
             <option value="">[Seleccione una opción]</option>
@@ -36,9 +36,9 @@ else{
             <option value="Detector de humo">Detector de humo</option>
         </select>
         <label for="">Costo</label>
-        <input type="text" name="costo" value="">
+        <input type="text" name="costo" value="" required>
         <label for="">Cantidad</label></div>
-        <input type="text" name="cantidad" value="" id="cantidad">
+        <input type="text" name="cantidad" value="" id="cantidad" required>
         <div class="">
             <label for="">Estado</label>
         </div>
@@ -50,7 +50,7 @@ else{
         </select>
         </div>
         <div class="">
-            <input type="file" name="imagen" >
+            <input type="file" name="imagen" required accept="image/jpeg image/png ">
         </div>
             <div><button type="submit" name="guardar" id="btnguardar">Guardar</button></div>
         </div>

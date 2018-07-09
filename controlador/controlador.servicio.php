@@ -20,12 +20,88 @@ function AgregarServicio(){
 }
 
 
+
+function BuscarSerAdmin(){
+    $busqueda =  '<div class="contenedor3" style="margin-bottom: -10px">
+      <form class="form" action="?bus=2" method="post" enctype="multipart/form-data">
+          <h2>Buscar un Servicio</h2>
+          <div class="ingreso2">
+          <input  type="text" name="valor" value="" placeholder="ingrese código del servicio ">
+          <button type="submit" name="buscar_serv">Buscar</button>
+          </div>
+       </form>
+       </div>';
+    echo $busqueda;
+    if(isset($_POST['buscar_serv'])){
+        if($_POST['valor'] != ""){
+            $valor = $_POST['valor'];
+            $resp = ListarServiciosAdmin($valor);
+            if($resp != false){
+                echo ListarServiciosAdmin($valor);
+            }else{
+                echo '<div  class="contenedor4" ><h4 style ="margin:30px ">Lo sentimos, no se encontraron resultados en la busqueda</h4> </div>';
+            }
+        }
+        else{
+            echo ListarServicios();
+
+        }
+
+    }else{
+        echo ListarServicios();
+
+    }
+
+
+
+}
+
+
+
+function ListarServiciosAdmin($valor = null){
+    $servicio = new servicioDAO();
+    if($valor == null){
+        $resp = $servicio->Listar();
+    }
+    else{
+        $resp = $servicio->BuscarPorNombre($valor);
+    }
+    if(count($resp) !=0){
+        $tabla = '<div class="contenedor3"><table style ="text-align:center">
+              <tr style ="margin-bottom: 30px;">
+                <th>Imagen de referencia</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Costo</th>
+              </tr>';
+        foreach ($resp as $key => $value) {
+            $imagen = "../assets/archivos/".$value['archivo'];
+            $tabla.='<tr>
+                  <td><img style="width:450px; height:300px" src='.$imagen.'></td>
+                  <td>'.$value['nom_servicio'].'</td>
+                  <td>'.$value['desc_servicio'].'</td>
+                  <td>$'.$value['costo_servicio'].'</td>
+
+               </tr>';
+  }
+        $tabla.='</table></div>';
+
+  }else{
+      return false;
+  }
+
+  return $tabla;
+}
+
+
+
 function ListarServicios(){
     $servicio = new servicioDAO();
     $resp = $servicio->Listar();
-    if(gettype($resp)=="array"){
-        $tabla = '<table>
-              <tr>
+
+    if(count($resp) !=0){
+        $tabla = '<table style ="text-align:center">
+              <tr style ="margin-bottom: 30px;">
                 <th>Imagen de referencia</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
@@ -34,17 +110,17 @@ function ListarServicios(){
         foreach ($resp as $key => $value) {
             $imagen = "assets/archivos/".$value['archivo'];
             $tabla.='<tr>
-                  <td><img style="width:350px; height:200px" src='.$imagen.'></td>
+                  <td><img style="width:450px; height:300px" src='.$imagen.'></td>
                   <td>'.$value['nom_servicio'].'</td>
                   <td>'.$value['desc_servicio'].'</td>
-                  <td>'.$value['costo_servicio'].'</td>
+                  <td>$'.$value['costo_servicio'].'</td>
 
                </tr>';
   }
         $tabla.='</table>';
 
   }else{
-  $tabla = "Lista no disponible por el momento.";
+      return false;
   }
 
   return $tabla;
@@ -53,7 +129,7 @@ function ListarServicios(){
 function BusquedaServicio(){
     if(isset($_POST['id_serv'])){
         $id = $_POST['id_serv'];
-        if($id != null){
+        if($id != ""){
             $servicioDAO = new ServicioDAO();
             $resp = $servicioDAO->BuscarPorId($id);
             if(gettype($resp)=="array"){
@@ -90,6 +166,13 @@ function BusquedaServicio(){
     return $resp;
 }
 
+
+
+
+
+
+
+
 function LlenarFormServicio(){
     $formulario = null;
 
@@ -107,53 +190,63 @@ function LlenarFormServicio(){
         $formulario = null;
         $servicio = new Servicio();
         $servicio = BusquedaServicio();
-        $Cbestado = $servicio->estado_servicio;
-        $formulario .= '<div class="contenedor">
-            <form class="form" action="?mod=2" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="ima" value="'.$servicio->archivo_servicio.'">
-            <input type="hidden" name="codigo" value="'.$servicio->id_servicio.'">
-            <div class="ingreso">
-            <div><label for="" >Código Servicio : '.$servicio->id_servicio.'</label></div>
-            <label for="" style="margin-top:10px">Nombre servicio</label>
-            <input type="text" name="nombre_servicio" value="'.$servicio->nom_servicio.'">
-            <label for="">Descripción servicio</label>
-            <textarea name="descripcion_servicio" rows="8" cols="80">'.$servicio->desc_servicio.'</textarea>
-            <label for="">Costo</label>
-            <input type="text" name="costo_servicio" value="'.$servicio->costo_servicio.'" style ="width:300px">
-            <label for="">Estado</label>
-            <div class="">
-                <select class="" name="estado_servicio" style ="width:300px">
-                  <option value="">[Selecione un estado]</option>';
+        if(gettype($servicio) == 'object'){
 
-                  if($Cbestado == 0){
-                      $formulario .= '<option value="0" selected >Activado</option>';
-                  }
-                  else{
-                      $formulario .=  '<option value="0">Activado</option>';
-                  }
-                  if($Cbestado == 1){
-                      $formulario .= '<option value="1" selected >Desactivado</option>';
-                  }
-                  else{
-                      $formulario .= '<option value="1">Desactivado</option>';
-                  }
+            $Cbestado = $servicio->estado_servicio;
+            $formulario .= '<div class="contenedor">
+                <form class="form" action="?mod=2" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="ima" value="'.$servicio->archivo_servicio.'">
+                <input type="hidden" name="codigo" value="'.$servicio->id_servicio.'">
+                <div class="ingreso">
+                <div><label for="" >Código Servicio : '.$servicio->id_servicio.'</label></div>
+                <label for="" style="margin-top:10px">Nombre servicio</label>
+                <input type="text" name="nombre_servicio" value="'.$servicio->nom_servicio.'">
+                <label for="">Descripción servicio</label>
+                <textarea name="descripcion_servicio" rows="8" cols="80">'.$servicio->desc_servicio.'</textarea>
+                <label for="">Costo</label>
+                <input type="text" name="costo_servicio" value="'.$servicio->costo_servicio.'" style ="width:300px">
+                <label for="">Estado</label>
+                <div class="">
+                    <select class="" name="estado_servicio" style ="width:300px">
+                      <option value="">[Selecione un estado]</option>';
 
-        $formulario .='
-                </select>
-                <div><img src="../assets/archivos/'.$servicio->archivo_servicio.'" style="margin: -50px 100px 200px 0px;float:right; height:200px; width:200px;></div>
+                      if($Cbestado == 0){
+                          $formulario .= '<option value="0" selected >Activado</option>';
+                      }
+                      else{
+                          $formulario .=  '<option value="0">Activado</option>';
+                      }
+                      if($Cbestado == 1){
+                          $formulario .= '<option value="1" selected >Desactivado</option>';
+                      }
+                      else{
+                          $formulario .= '<option value="1">Desactivado</option>';
+                      }
 
-            </div>
-            <div class="">
-                <input type="file" name="imagen_servicio" style ="width:400px" >
+            $formulario .='
+                    </select>
+                    <div><img src="../assets/archivos/'.$servicio->archivo_servicio.'" style="margin: -50px 100px 200px 0px;float:right; height:200px; width:200px;></div>
 
-            </div>
-                <div><button type="submit" name="guardar_servicio" style="width:300px">Guardar Cambios</button></div>
+                </div>
+                <div class="">
+                    <input type="file" name="imagen_servicio" style ="width:400px" >
 
-            </div>
-          </form>
-        </div>';
-        return $formulario;
+                </div>
+                    <div><button type="submit" name="guardar_servicio" style="width:300px">Guardar Cambios</button></div>
+
+                </div>
+              </form>
+            </div>';
+            return $formulario;
+        }else{
+
+            echo '<div  class="contenedor4" style="width:1050px;" ><h4 style ="margin:30px ">Lo sentimos, no se encontraron resultados en la busqueda</h4> </div>';
+
+
+        }
+
     }
+
 
 }
 
@@ -179,7 +272,8 @@ function ModificarFormularioServicio(){
             $obj_servicio->id_servicio = $id_servicio;
             $servicioDAO = new ServicioDAO();
             $servicioDAO->ModificarServicio($obj_servicio);
-            echo "registro Modificado";
+            echo '<div  class="contenedor4" style="width:1050px;" ><h4 style ="margin:30px ">Registro actualizado correctamente</h4> </div>';
+
 
 
       }
