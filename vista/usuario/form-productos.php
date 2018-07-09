@@ -1,6 +1,16 @@
 <?php
 require_once "../../modelo/class.productoDAO.php";
 require_once "../../modelo/class.producto.php";
+require_once "../../controlador/controlador.producto.php";
+
+
+if(isset($_GET['mod'])){
+  echo  LLenarFormulario();
+  ModificarFormulario();
+
+
+}
+else{
 
  ?>
 <div class="contenedor">
@@ -17,7 +27,7 @@ require_once "../../modelo/class.producto.php";
         <select class="" name="tipo">
           <option value="">[Seleccione una opción]</option>
           <option value="Alarma">Alarma</option>
-          <option value="Cámara de seguridad">Cámara de seguridad</option>
+          <option value="Cámara de seguridad" >Cámara de seguridad</option>
           <option value="Detector de humo">Detector de humo</option>
         </select>
       <label for="">Costo</label>
@@ -35,7 +45,7 @@ require_once "../../modelo/class.producto.php";
         </select>
       </div>
       <div class="">
-        <input type="file" name="imagen">
+        <input type="file" name="imagen" >
       </div>
       <div><button type="submit" name="guardar" id="btnguardar">Guardar</button></div>
     </div>
@@ -43,7 +53,7 @@ require_once "../../modelo/class.producto.php";
 </div>
 
 <?php
-  require_once "../../controlador/controlador.producto.php";
+}
   AgregarProducto();
 
  ?>

@@ -16,7 +16,7 @@ class ProductoDAO
         $conexion->InMoEl($sql);
     }
 
-    public function listar(){
+public function listar(){
         $conexion = new Conexion();
         $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
          costo_prod, cant_prod, archivo FROM tbl_productos ORDER BY cod_producto";
@@ -25,7 +25,7 @@ class ProductoDAO
     }
 
 
-    public function listarporTipo($tipo = null){
+public function listarporTipo($tipo = null){
         $conexion = new Conexion();
         $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
          costo_prod, cant_prod, archivo FROM tbl_productos WHERE tipo_producto ='$tipo' ORDER BY cod_producto";
@@ -34,12 +34,23 @@ class ProductoDAO
     }
 
 
+public function Modificar($obj_producto){
+    $conexion = new Conexion();
+    $sql = "UPDATE tbl_productos SET nom_producto='$obj_producto->nombre' , desc_producto = '$obj_producto->descripcion',
+     tipo_producto = '$obj_producto->tipo', costo_prod = '$obj_producto->costo', cant_prod = '$obj_producto->cantidad',
+    archivo= '$obj_producto->archivo', estado = '$obj_producto->estado' WHERE cod_producto = '$obj_producto->codigo'";
+    $conexion->InMoEl($sql);
+}
 
+public function Buscar($id = null){
+      $conexion = new Conexion();
+      $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+       costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE cod_producto ='$id' LIMIT 1";
+      $resp = $conexion->Consulta($sql);
+      return $resp;
 
 }
 
+}
 
-
-
-
- ?>
+?>
