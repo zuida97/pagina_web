@@ -4,42 +4,49 @@
 }
 body{
   margin: 0px;
-  /* background-image: url("../img/domotica.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background: #e2e2e2;
+  margin-right: 0;
+  
+
 }
 
 
 
 ul#menu-main{
+
+  font-family: serif;
   background-color: #1d506a;
   height: 50px;
   text-align: center;
+
 }
 
 #menu-main li{
-  display: block;
-  width: 200px;
-  height: 35px;
-  margin-left: 10px;
-  padding-top: 15px;
-  color: white;
-  position: relative;
-  right: 100px;
-  left: 50px;
+    display: block;
+    width: 200px;
+    height: 35px;
+    margin-left: 10px;
+    padding-top: 15px;
+    color: white;
+    position: relative;
+    right: 100px;
+    left: 50px;
 }
 
 #menu-main li{
   float: left;
 
+
+
 }
 
 #menu-main li:hover{
   width: 200px;
-  height: 35px;
+  height: 50px;
   background-color: #287095;
 }
 #menu-main li li:hover{
@@ -53,17 +60,18 @@ ul#menu-main{
   text-decoration: none;
 
 
+
 }
 
 #login-form {
   position: relative;
   z-index: 999;
-  width:220px;
-  height: 170px;
+  width:240px;
+  height: 200px;
   padding-top: 10px;
   padding-left: 30px;
   text-align: left;
-  right: 110px;
+  right: 100px;
   background-color: white;
   border:1px solid #ccc;
   border-radius: 10px 0px 10px 10px;
@@ -82,10 +90,20 @@ input#user , input#pass{
   border-radius: 5px;
 }
 #submit{
+  border-radius: 5px;
+  padding-bottom: 10px;
   margin-top: 10px;
-  height: 25px;
+  height: 30px;
   width: 192px;
   cursor: pointer;
+  border: 1px solid #364b55;
+  background-color: #466677;
+
+}
+#submit:hover{
+    background-color: #568096;
+
+
 }
 
 .centro{
@@ -154,6 +172,7 @@ footer {
 }
 
 #slider-container{
+    margin-top: -16px;
     width: 100%;
     height: 465px;
     position: relative;
@@ -227,7 +246,7 @@ footer {
     background-color: #d6d6d6;
 }
 
-.fade {
+.fde {
     animation-name: fade;
     animation-duration: .5s;
   }

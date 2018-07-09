@@ -1,7 +1,7 @@
 <ul id="menu-main">
   <a href="?mod=1"><li>INICIO</li></a>
   <a href="?mod=2"><li>NOSOTROS</li></a>
-  <a href="?mod=3"><li style="padding-left:30px; padding-right:30px">SERVICIOS Y CATALOGO</li></a>
+  <a href="?mod=3"><li style="width:300px">SERVICIOS Y CATALOGO</li></a>
   <a href="?mod=4" ><li>CONTACTO</li></a>
 <?php
   $resp = Acceder();
@@ -10,7 +10,7 @@
   {
  ?>
 
-  <a id="acceso" href="#" ondblclick="ocultar()"><li style="margin-left: 120px; text-align:right"> ACCESO <img style="margin-left:20px; padding-right:20px" src="assets/img/iniciar_sesion.png" alt="">
+  <a id="acceso" href="#" ondblclick="ocultar()"><li style="margin-left: 50px; text-align:right"> ACCESO <img style="margin-left:20px; padding-right:20px" src="assets/img/iniciar_sesion.png" alt="">
   <ul>
     <li>
       <div id="login-form">
@@ -22,7 +22,7 @@
             <input id="pass" type="password" name="pass" value="" placeholder="Contraseña">
           </div>
           <div class="">
-            <button  id="submit" type="submit" name="acceder">Acceder</button>
+            <button  id="submit" class="btn-primary" type="submit" name="acceder">Acceder</button>
           </div>
         </form>
       </div>

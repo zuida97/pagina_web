@@ -1,3 +1,5 @@
+
+
 #barraCatalogo{
     height: 300px;
 }
@@ -29,30 +31,75 @@
     text-shadow: -1px -1px 1px #1d506a, 2px 2px 2px #1d506a;
 }
 
-
-table{
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  opacity: 30%;
-}
-
-th{
-  height: 40px;
-  background-color: rgba(59, 59, 59, 0.55);
+.lado{
+    display: flex;
 
 }
-
-
-tr:hover{
-  background-color: rgb(126, 158, 255);
+aside {
+    height:100%;
+    width: 220px;
+    padding:20px;
+    background-color: rgba(70, 69, 69, 0.69);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0px 0px 10px 10px;
 
 }
 
+.posicionado{
+    position: relative;
+    left: 30%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#Cbuscar{
+    width: 500px;
+
+}
+input[type="radio"]{
+    margin-left: 10px;
+
+}
 
 
-td, th{
-  width:300px;
+ button[type="search"]{
 
+    width: 120px;
+    background: #0a6478;
+    padding: 8px;
+    border: none;
+    border-radius: 0px 25px 25px 0px;
+    color: white;
+    align-items: flex-end;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+input[type="text"]{
+    border-radius: 25px 0px 0px 25px;
+    text-indent: 10px;
+    height: 38px;
+    margin-right: -3px;
+
+
+}
+
+
+td{
+   text-align: left;
+
+   height:500px;
+   width:380px;
+   padding-bottom: 30px;
+   padding-top: 10px;
+   padding-left: 50px;
+   background-color: rgba(20, 20, 20, 0.6);
+   font-weight: bold;
+   font-size: 15px;
+   color: white;
 }

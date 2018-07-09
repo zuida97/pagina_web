@@ -66,14 +66,27 @@ else{
          }
          $modulo2 = (isset($_GET['mod'])) ? $_GET['mod'] : null;
          switch ($modulo2) {
-           case 1:
+            case 1:
               require_once 'form-productos.php';
              break;
-
+            case 2:
+                require_once 'form-servicios.php';
+                break;
            default:
              break;
          }
 
+         $modulo3 = (isset($_GET['bus'])) ? $_GET['bus'] : null;
+         switch ($modulo3) {
+            case 1:
+              require_once 'form-productos.php';
+             break;
+            case 2:
+                require_once 'form-servicios.php';
+                break;
+           default:
+             break;
+         }
 
 
         ?>

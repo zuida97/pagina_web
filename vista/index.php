@@ -16,6 +16,8 @@ require_once "../controlador/controlador.servicio.php";
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/catalogo.css">
         <title>Home</title>
@@ -88,4 +90,6 @@ require_once "../controlador/controlador.servicio.php";
       <script src="assets/js/jquery-1.11.0.min.js"></script>
       <script src="assets/js/menu_desplegable.js"></script>
       <script src="assets/js/slider.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
 </html>
