@@ -2,17 +2,17 @@
 
 class Producto
 {
-  public $codigo;
-  public $nombre;
-  public $descripcion;
-  public $tipo;
-  public $costo;
-  public $cantidad;
-  public $archivo;
-  public $estado;
+    public $codigo;
+    public $nombre;
+    public $descripcion;
+    public $tipo;
+    public $costo;
+    public $cantidad;
+    public $archivo;
+    public $estado;
 
-  function __construct($codigo = null, $nombre = null, $descripcion = null, $tipo = null,
-   $costo = null, $cantidad = null,$archivo =null, $estado = null)
+    function __construct($codigo = null, $nombre = null, $descripcion = null, $tipo = null,
+    $costo = null, $cantidad = null,$archivo =null, $estado = null)
   {
         $this->codigo = $codigo;
         $this->nombre = $nombre;

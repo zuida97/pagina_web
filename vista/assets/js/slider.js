@@ -33,7 +33,6 @@ document.querySelectorAll('.puntos_de_navegacion').forEach(function (elem) {
         let nodes = Array.prototype.slice.call(this.parentElement.children),
             indicepuntos = nodes.indexOf(elem);
 
-        // call the function for the index of clicked dot
         mostrarFotos(indicefotos = indicepuntos)
     })
 })

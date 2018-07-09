@@ -1,3 +1,18 @@
+<?php
+
+
+if(isset($_GET['mod'])){
+  echo   LlenarFormServicio();
+          ModificarFormularioServicio();
+
+}
+else{
+
+
+ ?>
+
+
+
 <div class="contenedor">
   <form class="form" action="?vst=3" method="post" enctype="multipart/form-data">
     <h2>Ingresar un servicio</h2>
@@ -25,5 +40,7 @@
 </div>
 <?php
     AgregarServicio();
+}
+
 
  ?>

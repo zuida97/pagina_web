@@ -24,11 +24,34 @@ public function listar(){
         return $resp;
     }
 
+public function ListarPorNombre($nom){
+          $conexion = new Conexion();
+          $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+           costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE nom_producto ='%$nom%'";
+          $resp = $conexion->Consulta($sql);
+          return $resp;
+}
 
-public function listarporTipo($tipo = null){
+
+
+
+public function listarporTipo($tipo = null, $nombre = null){
         $conexion = new Conexion();
-        $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
-         costo_prod, cant_prod, archivo FROM tbl_productos WHERE tipo_producto ='$tipo' ORDER BY cod_producto";
+        if($tipo != null && $nombre == null){
+            $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+             costo_prod, cant_prod, archivo FROM tbl_productos WHERE tipo_producto ='$tipo' ORDER BY cod_producto";
+        }
+        else if($tipo == null && $nombre != null){
+            $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+             costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE nom_producto LIKE '%$nombre%'";
+
+        }
+        else if( $tipo != null && $nombre != null){
+            $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
+             costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE tipo_producto = '$tipo' AND nom_producto LIKE '%$nombre%'";
+        }
+
+
         $resp = $conexion->Consulta($sql);
         return $resp;
     }
@@ -42,7 +65,7 @@ public function Modificar($obj_producto){
     $conexion->InMoEl($sql);
 }
 
-public function Buscar($id = null){
+public function Buscar($id){
       $conexion = new Conexion();
       $sql = "SELECT cod_producto, nom_producto, desc_producto, tipo_producto,
        costo_prod, cant_prod, archivo, estado FROM tbl_productos WHERE cod_producto ='$id' LIMIT 1";
@@ -50,6 +73,13 @@ public function Buscar($id = null){
       return $resp;
 
 }
+
+
+
+
+
+
+
 
 }
 

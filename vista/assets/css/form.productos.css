@@ -27,6 +27,54 @@
 .contenedor2:focus{
   outline: none;
 }
+
+
+
+.contenedor3{
+  width: 1200px;
+  height: 100%;
+  margin: 50px auto;
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px black;
+  text-align: center;
+}
+.contenedor:focus{
+  outline: none;.contenedor2{
+    width: 1050px;
+    height: 200px;
+    margin: 50px auto;
+    margin-bottom: -35px;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px black;
+  }
+  .contenedor2:focus{
+    outline: none;
+  }
+
+}
+
+.contenedor4{
+  width: 1200px;
+  height: 200px;
+  margin: 50px auto;
+  margin-bottom: -35px;
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px black;
+}
+.contenedor4:focus{
+  outline: none;
+}
+
+
 form.form .ingreso2 input{
   width: 50%;
   padding: 10px 5px 5px;
@@ -99,4 +147,17 @@ form.form button[type="submit"]{
 form.form #cantidad{
   width: 200px;
   height: 30px;
+}
+
+th, td{
+    padding: 20px 15px 20px 15px;
+    border-right: 1px solid rgba(70, 69, 67, 0.62);
+    border-bottom: 1px solid rgba(70, 69, 67, 0.62);
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+th{
+    background-color: #0a6478;
+    color: white;
+
 }

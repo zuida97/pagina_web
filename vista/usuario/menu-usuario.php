@@ -6,17 +6,17 @@
     <li><a href="#">ADMINISTRAR PRODUCTOS</a>
       <ul class="submenu">
         <li><a href="?vst=2" >INGRESAR</a></li>
-        <li><a href="?vst=2.1" >BUSCAR</a></li>
+        <li><a href="?bus=1" >BUSCAR</a></li>
         <li><a href="?mod=1" >MODIFICAR</a></li>
-        <li><a href="?vst=2.3" >ELIMINAR</a></li>
+        <li><a href="?eli=1" >ELIMINAR</a></li>
       </ul>
     </li>
     <li><a href="#">ADMINISTRAR SERVICIOS</a>
       <ul class="submenu">
-        <li><a href="?vst=6" >INGRESAR</a></li>
-        <li><a href="?vst=7" >BUSCAR</a></li>
-        <li><a href="?vst=8" >MODIFICAR</a></li>
-        <li><a href="?vst=9" >ELIMINAR</a></li>
+        <li><a href="?vst=3" >INGRESAR</a></li>
+        <li><a href="?bus=2" >BUSCAR</a></li>
+        <li><a href="?mod=2" >MODIFICAR</a></li>
+        <li><a href="?eli=2" >ELIMINAR</a></li>
       </ul>
     </li>
     <li><a href="?vst=4">ADMINISTRAR NOSOTROS</a>
