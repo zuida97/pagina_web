@@ -1,22 +1,25 @@
 <?php
 
-    class infonosotros
-    {
-        $titulo1;
-        $detalle2;
-        $titulo2;
-        $detalle2;
-        $titulo3;
-        $detalle3;
-        function __construct($titulo1=null,$detalle1=null,$titulo=null,$detalle2=null,$titulo3=null,$detalle3=null)
-        {
-            $this->titulo1=$titulo1;
-            $this->detalle1=$detalle1;
-            $this->titulo2=$titulo2;
-            $this->detalle2=$detalle2;
-            $this->titulo3=$titulo3;
-            $this->detalle3=$detalle3;
+    class infonosotros{
+        public $id;
+        public $tQuienes;
+        public $dQuienes;
+        public $tMision;
+        public $dMision;
+        public $tVision;
+        public $dVision;
+
+        function __construct($i=null,$titulo1=null,$detalle1=null,$titulo2=null,
+        $detalle2=null,$titulo3=null,$detalle3=null){
+            $this->id=$i;
+            $this->tQuienes=$titulo1;
+            $this->dQuienes=$detalle1;
+            $this->tMision=$titulo2;
+            $this->dMision=$detalle2;
+            $this->tVision=$titulo3;
+            $this->dVision=$detalle3;
         }
+
     }
 
 ?>

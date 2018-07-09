@@ -19,12 +19,9 @@
         <li><a href="#" >ELIMINAR</a></li>
       </ul>
     </li>
-    <li><a href="?vst=4">ADMINISTRAR NOSOTROS</a>
+    <li><a href="#">ADMINISTRAR NOSOTROS</a>
       <ul class="submenu">
-        <li><a href="#" >INGRESAR</a></li>
-        <li><a href="#" >BUSCAR</a></li>
-        <li><a href="#" >MODIFICAR</a></li>
-        <li><a href="#" >ELIMINAR</a></li>
+        <li><a href="?vst=4" >MODIFICAR</a></li>
       </ul>
 
     </li>

@@ -30,7 +30,6 @@ require_once "../controlador/controlador.servicio.php";
         <div class="">
           <?php
             require_once 'menu.php';
-
            ?>
         </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
