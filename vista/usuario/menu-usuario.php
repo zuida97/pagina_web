@@ -21,14 +21,8 @@
     </li>
     <li><a href="#">ADMINISTRAR NOSOTROS</a>
       <ul class="submenu">
-<<<<<<< HEAD
         <li><a href="?vst=4" >MODIFICAR</a></li>
-=======
-        <li><a href="?vst=10" >INGRESAR</a></li>
-        <li><a href="?vst=11" >BUSCAR</a></li>
-        <li><a href="?vst=12" >MODIFICAR</a></li>
-        <li><a href="?vst=13" >ELIMINAR</a></li>
->>>>>>> master
+
       </ul>
 
     </li>
