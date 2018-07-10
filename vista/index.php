@@ -25,13 +25,14 @@ require_once "../controlador/controlador.servicio.php";
     <body >
         <!-- HEADER DE LA PAGINA -->
         <header>
-          <img src="assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;">
+          <a href="index.php"><img src="assets/img/Logo.png" style="margin: 40px 30px 40px 30px; width: 250px; height:80px;"></a>
         </header>
 
         <!-- CARGA EL MENU A lA PAGINA CUANDO SE INGRESA POR DEFAULT -->
         <div class="">
           <?php
             require_once 'menu.php';
+
            ?>
         </div>
         <!-- SE CARGARA EL ARCHIVO SEGUN LA OPCION QUE ELIGA EL USUARIO -->
@@ -75,9 +76,9 @@ require_once "../controlador/controlador.servicio.php";
           <div>
               <ul class="rrss">
                 <li>Siguenos en: </li>
-                <li><a href="#"><img src="assets/img/facebook.png" width="40px"></a></li>
-                <li><a href="#"><img src="assets/img/twitter.png" width="40px"></a></li>
-                <li><a href="#"><img src="assets/img/instagram.png" width="40px"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><img src="assets/img/facebook.png" width="40px"></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><img src="assets/img/twitter.png" width="40px"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="assets/img/instagram.png" width="40px"></a></li>
               </ul>
           </div>
           <div>

@@ -9,7 +9,7 @@ body{
   background-attachment: fixed;
   background-size: cover;
   margin-right: 0;
-  
+
 
 }
 
@@ -134,9 +134,9 @@ footer {
 
 #pie{
   color: white;
-
-
 }
+
+
 
 /* estilo Slider y posicionamiento */
 
@@ -257,4 +257,13 @@ footer {
 @font-face {
     font-family: "Galada";
     src: url('../font/Galada/Galada-Regular.ttf');
+}
+
+/* NOSOTROOOOOOOOS ###### */
+
+#container{
+  margin: 50px 30px 50px;
+}
+.parrafo{
+  margin-top: 40px;
 }
